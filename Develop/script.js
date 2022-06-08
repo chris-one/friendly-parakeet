@@ -27,10 +27,12 @@ function generatePassword() {
   var passwordLength = prompt('You must choose password length. Minimum 8 characters, no more than 128 characters');
 
   // min and max requirements for the password
-  if (passwordLength < 8 || passwordLength > 128) {
+  while (passwordLength < 8 || passwordLength > 128) {
     alert("Password must be between 8-128 characters"); 
+    var passwordLength = prompt('You must choose password length. Minimum 8 characters, no more than 128 characters');
+
   }
-  
+  console.log("chris")
   // options for characters numbers and symbol for the password
   var lowerCase = confirm('Would you like LOWERCASE letters?');
   var upperCase = confirm('Would you like UPPERCASE letters?');
